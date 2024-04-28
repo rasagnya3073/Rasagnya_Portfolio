@@ -113,7 +113,7 @@ nav ul li a:hover::after{
 }
 
 
-@media (min-width:540px) {
+@media only screen and (min-width:540px) {
     .head{
         flex-direction: row;
         align-items: center;
@@ -227,7 +227,7 @@ nav ul li a:hover::after{
     display: block;
 }
 
-@media (min-width:540px) {
+@media  only screen and (min-width:540px) {
     .row {
         flex-direction: row;
         align-items: center;
@@ -242,7 +242,7 @@ nav ul li a:hover::after{
     }
 }
 
-@media (max-width:540px){
+@media  only screen and (max-width:540px){
     .about-head-image {
         display: none;
     }
