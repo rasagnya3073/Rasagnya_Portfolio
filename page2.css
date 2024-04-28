@@ -136,10 +136,6 @@ nav ul li a:hover::after{
         flex: 1 1 calc(50% - 1em);
         margin-top: 15px;
     }
-    .header-image img{
-        height: 75%;
-        width: 75%;
-    }
     .header-text h1{
         font-weight: bolder;
     }
@@ -247,7 +243,7 @@ nav ul li a:hover::after{
     display: block;
 }
 
-@media  only screen and (min-width:540px) {
+@media(min-width:540px) {
     .row {
         /* flex-direction: column; */
         align-items: center;
