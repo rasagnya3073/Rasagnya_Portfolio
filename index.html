@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- boostrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="page2.css">
+    <script src="https://kit.fontawesome.com/d6d44758e7.js" crossorigin="anonymous"></script>
+<style>
+*{
+  box-sizing: border-box;
+}
+.nav {
+    position: fixed; 
+  top: 0; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1000; 
+  background-color:#000000;
+}
+
+.nav > .nav-header {
+  flex: 0.75;
+  padding-left: 1rem;
+}
+/* .nav > .nav-header > .nav-title {
+  font-size: 22px;
+  color: #fff;
+} */
+.nav > .nav-list {
+  display: flex;
+  padding: 0%;
+  margin: 0%;
+  gap: 1rem;
+
+}
+
+.nav > .nav-list > li {
+  list-style-type: none;
+}
+.nav > .nav-list > li a {
+    font-size: medium;
+  text-decoration: none;
+  color: #efefef;
+  cursor: pointer;
+}
+.nav > #nav-check {
+    display: none;
+}
+@media (max-width: 980px) {
+  .nav {
+    padding: 1rem;
+  }
+  .nav > #nav-check {
+    position:relative;
+    top: 3rem;
+    z-index: 3;
+    margin: 0%;
+    padding: 0%;
+}
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 0.2rem;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-list {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    background-color: #000000;
+    height: 0;
+    transition: all 0.3s ease-in;
+    top: 3rem;
+    left: 0;
+    overflow: hidden;
+  }
+  .nav > .nav-list > li {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .nav > #nav-check:checked ~ .nav-list {
+    height: calc(100vh - 50px);
+  }
+}
+</style>
+</head>
+<body>
+    <nav class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <img src="name2.png" alt="Rasagnya" class="logo">
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <ul class="nav-list">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="my_resume.pdf" download>Download My Resume</a></li>
+        </ul>
+      </nav>
+    <!-- <div class="navdiv">
+        <nav class="navbar">
+            <img src="name2.png" alt="Rasagnya" class="logo">
+            <div class="topnav" id="myTopnav">
+                <ul id="nav-items-bg-container">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Certifications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="my_resume.pdf" download>Download My Resume</a></li>
+                    <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </div> -->
+
+    <div id="header">
+        <div class="container">
+            <div class="head">
+                <div class="header-image">
+                    <img src="my-img3.jpg" alt="Rasagnya">
+                </div>
+                <div class="header-text">
+                    <h1>He!!o <br> I am <span class="last">B</span>orra <span class="last">R</span>asagnya  </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="header-image about-head-image">
+                    <img src="girl_programmer.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an enthusiastic learner who is always starved to acquire and master the skill I learn so as to secure a position
+                    where I can efficiently contribute my skill for the growth of the organisation and build my professional career.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span><i class="fa-solid fa-terminal"></i>   C and Python Programming</span><br></li>
+                            <li><span><i class="fa-solid fa-code"></i>   Data Structures and Algorithms</span><br></li>
+                            <li><span><i class="fa-solid fa-database"></i>   Working with data in SQL</span><br></li>
+                            <li><span><i class="fa-solid fa-chart-simple"></i>   PowerBI</span><br></li>
+                            <li><span><i class="fa-regular fa-file-code"></i>   Front-End Web Development</span><br></li>
+                            <li><span><i class="fa-solid fa-microchip"></i>   Basic knowledge on Machine Learning algorithms</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><i class="fa-solid fa-graduation-cap"></i>   <span><b>2021 - present</b></span><br>
+                                Currently Pursuing 6th Semester in GMR Institute of Technology, Affiliated to JNTUK, Rajam.</li>
+                            <li><i class="fa-solid fa-book-open-reader"></i>   <span><b>2019 – 2021</b></span><br>
+                                Completed Higher Secondary Education in Sri Chaitanya Jr College, Under Board of Intermediate Education, Andhra Pradesh, Vizianagaram.</li>
+                            <li><i class="fa-solid fa-school"></i>   <span><b>2018 – 2019</b></span><br>
+                                Completed Secondary Educationin Smt Godavari Devi Saraf High School, Affiliated with CBSE, Garividi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Certifications -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Licences & Certifications</h1>
+            <div class="services-list">
+                <!-- <br><br> -->
+                <div class="service">
+                    <div class="service-img">
+                        <img src="NPTEL_JAVA.png" alt="Data Structures and Algorithms using JAVA">
+                    </div>
+                    <div class="layer">
+                        <h2>Data Structures and Algorithms using JAVA</h2>
+                        <p>This course is used for me in improving my knowledge of Data Structures by implementing them in JAVA language. 
+                            This course also helped me to gain confidence in programming with JAVA. 
+                            Moreover I recieved a Silver Badge in this course.</p>
+                    </div>
+                </div>
+                <!-- <br><br> -->
+                <div class="service">
+                    <div class="service-img">
+                        <img src="Web_IBM.png" alt="Introduction to Web Development with HTML, CSS,JavaScript">
+                    </div>
+                    <div class="layer">
+                        <h2>Introduction to Web Development with HTML, CSS,JavaScript</h2>
+                        <p>This is an online certification course offered by IBM Skills Network through Coursera where 
+                            I enhanced my skill in developing front-end webpages using HTML, CSS and JAvaScript.</p>
+                    </div>
+                </div>
+                <!-- <br><br> -->
+                <div class="service">
+                    <div class="service-img">
+                        <img src="WEB_UCDavis.png" alt="Introduction to Web Development">
+                    </div>
+                    <div class="layer">
+                        <h2>Introduction to Web Development</h2>
+                        <p>I have completed the course in Introduction to Web Development that is authorized by University of California, 
+                            Davis and offered through Coursera. This course taught me with the basic knowledge os HTML, CSS and JavaScript
+                            that helped me to develop fromt-end web pages and improved my enthusiasm in Front-end Development.</p>
+                    </div>
+                </div>
+                <!-- <br><br> -->
+                <div class="service">
+                    <div class="service-img">
+                        <img src="Python_Meta.png" alt="Programming in Python">
+                    </div>
+                    <div class="layer">
+                        <h2>Programming in Python</h2>
+                        <p>Programming in Python is one of the courses that I was really interested in and enthusiatic to learn.
+                            This course was offered my Meta in Coursera and I really enjoyed a lot learning coding skills in Python language. This course help me understand 
+                            the basic syntaxes of Python Programming language and made me eager to develop my coding in Python.</p>
+                    </div>
+                </div>
+                <!-- <br><br> -->
+                <div class="service">
+                    <div class="service-img">
+                        <img src="Python_IBM.png" alt="Python for Data Science, AI & Development">
+                    </div>
+                    <div class="layer">
+                        <h2>Python for Data Science, AI & Development</h2>
+                        <p>My enthusiasm in Python made me interested in AI and Development and the course Python for Data Science, AI & Development offered
+                            by IBM in Coursera helped me in understanding how to apply my Python skills is the field of AI and DataScience. This course introduced me with 
+                            some basic modules in Python that are useful for the understanding of Data & some practical implementation in AI.</p>
+                    </div>
+                </div>
+                <!-- <br><br> -->
+                <div class="service">
+                    <div class="service-img">
+                        <img src="NPTEL_DBMS.png" alt="Data Base Management System">
+                    </div>
+                    <div class="layer">
+                        <h2>Data Base Management System</h2>
+                        <p>The course of Data Base Management System helped me in query the data from a DataBase using basic SQL querries.
+                            I learnt the features of SQL and managed to perform some operations in SQL. This course helped me to
+                            create, modify the data using DDL, DML, DCL and TCL.</p>
+                    </div>
+                </div>
+                <!-- <br><br> -->
+                <div class="service">
+                    <div class="service-img">
+                        <img src="BI_office master.png" alt="PowerBI Workshop">
+                    </div>
+                    <div class="layer">
+                        <h2>PowerBI Workshop</h2>
+                        <p>This course is used for me to create interactive dashboards and reports from huge data to gain valuable insights.
+                           It helped me understand how to integrate Power BI with other Microsoft tools like Excel, SharePoint, and Teams
+                        </p>
+                    </div>
+                </div>
+                <!-- <br><br> -->
+                <div class="service">
+                    <div class="service-img">
+                        <img src="BI_simplilearn.png" alt="Power BI for Beginners">
+                    </div>
+                    <div class="layer">
+                        <h2>Power BI for Beginners</h2>
+                        <p>Power BI has empowered me to create interactive dashboards and reports from complex datasets, 
+                            allowing me to gain valuable insights quickly and effectively. With this course, 
+                            I feel more confident in my ability to analyze data and communicate insights effectively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- My projects -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Rock_Paper_Scissor.png" alt="Online Scrap Book">
+                    <div class="layer">
+                        <h2>Rock Paper Scissor</h2>
+                        <p>This is a web based simple "Rock Paper Scissor" game that every one of us love to play.  
+                            The is designed using basic HTML, CSS and JavaScript.Apart from applying my skills, 
+                            I have learnt many new things while developing this application. <br>
+                            <a href="https://rasagnya3073.github.io/Rock-Paper-Scissor/" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="Food_Recipe.png" alt="Financial Loan Classification">
+                    <div class="layer">
+                        <h2>Food Recipe</h2>
+                        <p>The application "Recipe Finder" is built using HTML, CSS and JavaScript.
+                            This application brings you the list of food items and the recipe of each item that can be cooked using the ingredient you choose.
+                            The list of food items and their recipes are fetched using the "TheMealDB" API. This API comprised a total of 575 ingredients and 302 recipes. 
+                            This application is responsive and can fit into any type of screen.
+                            <br>
+                            <a href=" https://rasagnya3073.github.io/Recipe-Finder/" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="call_centre_dashboard.png" alt="Crop Predictor">
+                    <div class="layer">
+                        <h2>Call Centre Dashboard</h2>
+                        <p> This interactive tool provides a detailed breakdown of daily call volumes 
+                            categorized by reasons and channels across different locations.
+                            It explores the data within the selected date and understand it's contents, trends, pattern within that timeframe.
+                            Also it filters the data to include only records relevant to that city and then examine the data.
+                            <br>
+                            <!-- <a href="https://github.com/rasagnya3073/Crop-Predictor" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a> -->
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="Crop_Predictor.png" alt="Crop Predictor">
+                    <div class="layer">
+                        <h2>Crop Predictor</h2>
+                        <p>This application accurately predicts the best crop for a particular piece of land based on key input factors 
+                            such as Nitrogen, Phosphorus, Potassium levels, Temperature, Humidity, pH of the soil, and rainfall in mm.
+                            Utilizing the Random Forest Classifier algorithm, an ensemble learning technique, 
+                            this application provides reliable predictions. The User Interface is designed using Flask for seamless interaction.
+                            This application is a valuable tool for enhancing crop yield predictions and aiding farmers in making informed decisions.
+                            <br>
+                            <a href="https://github.com/rasagnya3073/Crop-Predictor" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p >Hello Everyone! <br> Learning and practically applying my skills make me pleased.
+                        I would be glad to hear you enjoyed visiting my profile. I will be happy to get a chance to connect with you. </p>
+                    <div class="social-icons">
+                        <p><i class="fa-solid fa-house-user" ></i> Borra Rasagnya,<br> Main Road, <br>Garividi, <br>Vizianagaram Dist, 
+                            <br>Andhra Pradesh.</p>
+                        <p><i class="fa-solid fa-envelope"></i>rasagnyanagesh3073@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>8008849920</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/rasagnya-borra/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/rasagnya3073" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:rasagnyanagesh3073@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="https://wa.me/918008849920" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://t.me/Rasagnya_Borra" target="_blank"><i class="fa-regular fa-paper-plane"></i></a>
+                        <!-- <a href="https://www.instagram.com/_rasagnya.nagesh_/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a> -->
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <center><h1 class="last">ThankYou! Visit Again:)</h1></center>
+    </div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwUY3STXafgnWtpp-XZVqcEpArkGBRT4liHv9FwGWZ433wEyDy0FaC_uRAPKRQVXy6v/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    const msg=document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<script>
+    function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
