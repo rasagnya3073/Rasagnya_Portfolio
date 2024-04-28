@@ -55,6 +55,7 @@
 @media (max-width: 980px) {
   .nav {
     padding: 1rem;
+    /* width: 50%; */
   }
   .nav > #nav-check {
     position:relative;
@@ -85,23 +86,27 @@
   .nav > .nav-list {
     z-index: 1;
     position: absolute;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     gap: 0.8rem;
-    width: 100%;
+    width: 50%;
     background-color: #000000;
     height: 0;
     transition: all 0.3s ease-in;
     top: 3rem;
-    left: 0;
+    right: 0;
     overflow: hidden;
+    margin-top: 10px;
+    color: #ff004f;
+
   }
   .nav > .nav-list > li {
-    width: 100%;
+    width: 50%;
     margin-top: 1rem;
   }
   .nav > #nav-check:checked ~ .nav-list {
-    height: calc(100vh - 50px);
+    /* height: calc(100vh - 50px); */
+    height: 400px;
   }
 }
 </style>
