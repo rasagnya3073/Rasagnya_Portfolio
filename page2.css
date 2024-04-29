@@ -135,6 +135,10 @@ nav ul li a:hover::after{
         order: 2;
         flex: 1 1 calc(40% - 1em);
     }
+    .header-image img{
+        border: 3px solid #ff004f;
+
+    }
     .header-text {
         flex: 1 1 calc(60% - 1em);
     }
@@ -145,10 +149,15 @@ nav ul li a:hover::after{
     .head{
         flex-direction: column;
         gap: 10em;
+        align-items: center;
     }
     .header-image{
         height: 50%;
         width: 50%;
+    }
+    .header-image img{
+        border: 3px solid #ff004f;
+
     }
 }
 
